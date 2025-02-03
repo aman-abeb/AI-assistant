@@ -1,0 +1,13 @@
+/* Basic styling for the meta box */
+#aica_meta_box {
+  background: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+#aica_result {
+  margin-top: 20px;
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
