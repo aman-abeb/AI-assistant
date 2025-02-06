@@ -35,7 +35,7 @@ function aica_register_settings()
 {
     register_setting('aica_options_group', 'aica_api_key', 'sanitize_text_field');
     add_settings_section('aica_main_section', 'API Settings', null, 'ai-content-assistant');
-    add_settings_field('aica_api_key', 'OpenAI API Key', 'aica_api_key_callback', 'ai-content-assistant', 'aica_main_section');
+    add_settings_field('aica_api_key', 'API Key', 'aica_api_key_callback', 'ai-content-assistant', 'aica_main_section');
 }
 add_action('admin_init', 'aica_register_settings');
 
@@ -45,10 +45,3 @@ function aica_api_key_callback()
     $api_key = get_option('aica_api_key');
     echo '<input type="text" name="aica_api_key" value="' . esc_attr($api_key) . '" class="regular-text">';
 }
-
-function api_key()
-{
-    $api_key = get_option('aica_api_key');
-    return $api_key;
-}
-add_action('wp_footer', 'api_key');
